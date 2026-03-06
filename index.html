@@ -1,104 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Shop | Bootstrap Edition</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Saree Elegance | প্রিমিয়াম শাড়ি কালেকশন</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><i class="bi bi-lightning-charge-fill text-warning"></i> PRO<span class="text-warning">SHOP</span></a>
-            <div class="d-flex align-items-center">
-                <button class="btn btn-warning position-relative me-2" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar">
-                    <i class="bi bi-cart3"></i>
-                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-                </button>
-            </div>
-        </div>
+    <nav class="glass-nav">
+        <div class="logo">SAREE<span>LUXE</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">হোম</a></li>
+            <li><a href="#collection">কালেকশন</a></li>
+            <li><a href="#order">অর্ডার করুন</a></li>
+        </ul>
     </nav>
 
-    <header class="hero-section text-center text-white d-flex align-items-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-3">Premium Collection 2026</h1>
-            <p class="lead mb-4">বুটস্ট্র্যাপের লেটেস্ট ডিজাইনে সাজানো আপনার পছন্দের অনলাইন শপ।</p>
-            <a href="#shop" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold">এখনই কিনুন</a>
+    <header id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>ঐতিহ্যের সাথে <br><span class="gradient-text">আধুনিকতার ছোঁয়া</span></h1>
+            <p>আমাদের প্রতিটি শাড়ি আপনার আভিজাত্য আর সৌন্দর্যের প্রতিফলন। আজই বেছে নিন আপনার পছন্দেরটি।</p>
+            <div class="cta-group">
+                <a href="#collection" class="btn-primary">কালেকশন দেখুন</a>
+            </div>
         </div>
     </header>
 
-    <section id="shop" class="py-5 bg-light">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <h2 class="fw-bold border-start border-4 border-warning ps-3">নতুন প্রোডাক্টসমূহ</h2>
-                </div>
-            </div>
-            <div class="row g-4" id="product-container">
-                </div>
+    <section id="collection" class="grid-layout">
+        <div class="section-title reveal">
+            <h2>আমাদের <span class="gradient-text">সেরা কালেকশন</span></h2>
+        </div>
+        <div class="card reveal">
+            <div class="product-badge">Hot</div>
+            <div class="img-placeholder">শাড়ির ছবি</div>
+            <h3>রাজকীয় জামদানি</h3>
+            <p>৳ ৪,৫০০</p>
+            <a href="#order" class="btn-sm">অর্ডার দিন</a>
+        </div>
+        <div class="card reveal">
+            <div class="img-placeholder">শাড়ির ছবি</div>
+            <h3>পিওর সিল্ক</h3>
+            <p>৳ ৩,২০০</p>
+            <a href="#order" class="btn-sm">অর্ডার দিন</a>
+        </div>
+        <div class="card reveal">
+            <div class="img-placeholder">শাড়ির ছবি</div>
+            <h3>কাতান স্পেশাল</h3>
+            <p>৳ ৫,৮০০</p>
+            <a href="#order" class="btn-sm">অর্ডার দিন</a>
         </div>
     </section>
 
-    <div class="offcanvas offcanvas-end" id="cartSidebar">
-        <div class="offcanvas-header bg-dark text-white">
-            <h5 class="offcanvas-title"><i class="bi bi-bag-heart"></i> আপনার ব্যাগ</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body d-flex flex-column">
-            <div id="cart-items" class="flex-grow-1">
-                </div>
-            <div class="border-top pt-3">
-                <div class="d-flex justify-content-between mb-3 fw-bold fs-5">
-                    <span>মোট:</span>
-                    <span id="total-price" class="text-primary">$0.00</span>
-                </div>
-                <button class="btn btn-success w-100 mb-2 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#checkoutModal">চেকআউট করুন</button>
-                <button class="btn btn-outline-secondary btn-sm w-100" onclick="clearCart()">কার্ট খালি করুন</button>
+    <section id="order" class="order-section">
+        <div class="order-container reveal">
+            <div class="form-header">
+                <h2>দ্রুত অর্ডার করুন</h2>
+                <p>নিচের ফর্মটি পূরণ করুন, আমরা আপনার সাথে যোগাযোগ করবো।</p>
             </div>
+            <form id="orderForm">
+                <div class="input-group">
+                    <input type="text" placeholder="আপনার নাম" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="মোবাইল নম্বর" required>
+                </div>
+                <div class="input-group">
+                    <select required>
+                        <option value="">শাড়ি নির্বাচন করুন</option>
+                        <option value="jamdani">রাজকীয় জামদানি</option>
+                        <option value="silk">পিওর সিল্ক</option>
+                        <option value="katan">কাতান স্পেশাল</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="আপনার সম্পূর্ণ ঠিকানা" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">অর্ডার কনফার্ম করুন</button>
+            </form>
         </div>
-    </div>
+    </section>
 
-    <div class="modal fade" id="checkoutModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-warning text-dark">
-                    <h5 class="modal-title fw-bold">অর্ডার কনফার্ম করুন</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">আপনার নাম</label>
-                            <input type="text" class="form-control" placeholder="যেমন: রহিম আহমেদ">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">মোবাইল নম্বর</label>
-                            <input type="tel" class="form-control" placeholder="017xxxxxxxx">
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">ডেলিভারি ঠিকানা</label>
-                            <textarea class="form-control" rows="2"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">ডেলিভারি ঠিকানা</label>
-                            <textarea class="form-control" rows="2"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">বাতিল</button>
-                    <button type="button" class="btn btn-primary" onclick="confirmOrder()">অর্ডার দিন</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
