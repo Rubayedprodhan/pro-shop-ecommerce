@@ -11,7 +11,16 @@ const products = [
 
 let cart = [];
 
-// Load Products
+
+
+
+
+
+
+
+
+
+// Products
 function renderProducts() {
     const container = document.getElementById('product-container');
     container.innerHTML = products.map(p => `
@@ -34,6 +43,8 @@ function addToCart(name, price) {
     cart.push({name, price});
     updateCart();
 }
+
+
 
 function updateCart() {
     const badge = document.getElementById('cart-badge');
@@ -64,15 +75,21 @@ function updateCart() {
     totalDisp.innerText = `$${sum.toFixed(2)}`;
 }
 
+
+
 function removeItem(index) {
     cart.splice(index, 1);
     updateCart();
 }
 
+
+
 function clearCart() {
     cart = [];
     updateCart();
 }
+
+
 
 function confirmOrder() {
     alert("আপনার অর্ডারটি গ্রহণ করা হয়েছে! ধন্যবাদ।");
@@ -81,5 +98,5 @@ function confirmOrder() {
     bootstrap.Modal.getInstance(document.getElementById('checkoutModal')).hide();
 }
 
-// Start
+
 window.onload = renderProducts;
